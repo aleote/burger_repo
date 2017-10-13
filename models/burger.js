@@ -8,7 +8,7 @@ var burgerPatty = {
 	},
 
 	create: function(cols,vals, cb){
-		orm.create("bugers", cols, vals, function(res){
+		orm.create("burgers", cols, vals, function(res){
 			cb(res);
 		});
 	},

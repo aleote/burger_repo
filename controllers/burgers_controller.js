@@ -25,6 +25,8 @@ router.post("/burgers/create", function(req, res) {
   ], [
     req.body.name, false // setting devoured to false, because it is not devoured yet 
   ], function(result) {
+
+  	console.log("burger recieved");
     // Send back the ID of the new quote
     res.redirect("/index");
   });
