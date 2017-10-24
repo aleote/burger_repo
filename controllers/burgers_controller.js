@@ -33,14 +33,18 @@ router.post("/burgers/create", function(req, res) {
 });
 
 
-// when you click on it, your changing if eaten or not 
-router.put("/api/put/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
 
-  console.log("condition", condition);
+// when you click on it, your changing if eaten or not 
+router.put("/burgers/create", function(req, res) {
+  console.log("this is my log");
+  var condition = "id = " + req.body.id;
+
+  // console.log("condition", condition);
+
+console.log("\n\n", req.body.id);
 
   burgerPatty.update({
-    devoured: req.body.devoured 
+    devoured: req.body.id
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

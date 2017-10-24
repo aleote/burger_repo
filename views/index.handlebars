@@ -115,7 +115,6 @@
 
 
 
-
     $(".devour").on("click", function(event){
         event.preventDefault();
         var iD = $(this).data("id");
@@ -124,7 +123,7 @@
             id: iD
         };
 
-        $.ajax("/api/burgers", {
+        $.ajax("/burgers/create", {
             type: "PUT",
             data: devourState
         }).then(function(){

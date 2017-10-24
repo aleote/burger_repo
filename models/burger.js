@@ -13,7 +13,10 @@ var burgerPatty = {
 		});
 	},
 
-	update: function(onjColVals, condition, cb){
+	update: function(objColVals, condition, cb){
+		console.log(objColVals);
+		console.log(condition);
+		console.log(cb);
 		orm.update("burgers", objColVals, condition, function(res){
 			cb(res);
 		});
